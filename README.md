@@ -125,6 +125,32 @@ The landing page includes:
 
 ---
 
+## Screenshots
+
+### FloodGuard Landing Page
+
+The FloodGuard landing page introduces the platform and provides access to the municipality-level flood risk monitoring dashboard.
+
+![FloodGuard Landing Page](screenshots/landing-page.png)
+
+---
+
+### Philippines Flood Risk Monitoring Dashboard
+
+The main monitoring dashboard displays municipality-level flood risk across the Philippines using color-coded indicators, risk summaries, AI-assisted insights, map controls, and system alerts.
+
+![Philippines Flood Risk Dashboard](screenshots/flood-dashboard.png)
+
+---
+
+### Municipality-Level Monitoring
+
+Users can zoom into the map and select individual municipalities to view the municipality name and corresponding flood-risk information.
+
+![Municipality-Level Monitoring](screenshots/municipality-view.png)
+
+---
+
 ## Technology Stack
 
 ### Frontend
