@@ -1,0 +1,241 @@
+.dashboard-stats {
+  position: absolute;
+
+  top: 24px;
+  right: 24px;
+
+  z-index: 2000;
+
+  display: flex;
+  align-items: stretch;
+
+  min-height: 70px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(8, 18, 34, 0.97),
+      rgba(3, 10, 21, 0.96)
+    );
+
+  border: 1px solid rgba(48, 78, 116, 0.65);
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  overflow: hidden;
+
+  user-select: none;
+}
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.dashboard-brand {
+  min-width: 205px;
+
+  padding: 12px 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  border-right: 1px solid rgba(74, 100, 132, 0.25);
+}
+
+.dashboard-brand-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #102b4b,
+      #071425
+    );
+
+  border: 1px solid rgba(74, 143, 218, 0.45);
+
+  color: #60a5fa;
+
+  font-size: 12px;
+  font-weight: 900;
+
+  letter-spacing: 0.05em;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.35);
+}
+
+.dashboard-brand-title {
+  color: #f1f5f9;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 0.01em;
+}
+
+.dashboard-brand-subtitle {
+  margin-top: 3px;
+
+  color: #7f91a8;
+
+  font-size: 9px;
+  font-weight: 500;
+
+  letter-spacing: 0.02em;
+}
+
+/* =========================================================
+   STAT
+========================================================= */
+
+.dashboard-stat {
+  min-width: 82px;
+
+  padding: 11px 14px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-right: 1px solid rgba(74, 100, 132, 0.2);
+}
+
+.dashboard-stat:last-child {
+  border-right: none;
+}
+
+.dashboard-stat-label {
+  margin-bottom: 5px;
+
+  color: #7f91a8;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+.dashboard-stat-value {
+  font-size: 21px;
+  line-height: 1;
+
+  font-weight: 900;
+}
+
+/* =========================================================
+   COLORS
+========================================================= */
+
+.dashboard-total .dashboard-stat-value {
+  color: #e2e8f0;
+}
+
+.dashboard-low .dashboard-stat-value {
+  color: #22c55e;
+}
+
+.dashboard-moderate .dashboard-stat-value {
+  color: #facc15;
+}
+
+.dashboard-high .dashboard-stat-value {
+  color: #f97316;
+}
+
+.dashboard-very-high .dashboard-stat-value {
+  color: #ef4444;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .dashboard-stats {
+    top: 18px;
+    right: 18px;
+  }
+
+  .dashboard-brand {
+    min-width: 175px;
+  }
+
+  .dashboard-stat {
+    min-width: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 850px) {
+  .dashboard-stats {
+    left: 12px;
+    right: 12px;
+
+    top: 92px;
+
+    width: auto;
+
+    overflow-x: auto;
+  }
+
+  .dashboard-brand {
+    min-width: 170px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-stats {
+    min-height: 62px;
+
+    border-radius: 10px;
+  }
+
+  .dashboard-brand {
+    min-width: 150px;
+    padding: 9px 12px;
+  }
+
+  .dashboard-brand-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .dashboard-brand-title {
+    font-size: 11px;
+  }
+
+  .dashboard-brand-subtitle {
+    font-size: 8px;
+  }
+
+  .dashboard-stat {
+    min-width: 62px;
+    padding: 8px;
+  }
+
+  .dashboard-stat-label {
+    font-size: 7px;
+  }
+
+  .dashboard-stat-value {
+    font-size: 17px;
+  }
+}

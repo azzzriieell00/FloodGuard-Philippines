@@ -1,0 +1,759 @@
+/* =========================================================
+   FLOODGUARD AI INSIGHTS
+   Compact dashboard intelligence panel
+   ========================================================= */
+
+.ai-insight {
+  position: relative;
+
+  width: 100%;
+  max-width: 360px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 16, 29, 0.98),
+      rgba(3, 9, 17, 0.98)
+    );
+
+  border: 1px solid rgba(65, 99, 132, 0.42);
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  color: #e5edf5;
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.55),
+    0 0 30px rgba(0, 130, 255, 0.05);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.ai-insight-header {
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 11px;
+
+  box-sizing: border-box;
+
+  background: rgba(9, 17, 29, 0.98);
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+
+.ai-insight-title {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: #f1f5f9;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+
+  text-transform: uppercase;
+}
+
+
+.ai-insight-icon {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 7px rgba(34, 197, 94, 0.9);
+}
+
+
+/* =========================================================
+   HEADER RIGHT
+   ========================================================= */
+
+.ai-insight-header-right {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+
+/* =========================================================
+   LIVE
+   ========================================================= */
+
+.ai-live {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 4px 7px;
+
+  border:
+    1px solid
+    rgba(34, 197, 94, 0.35);
+
+  border-radius: 999px;
+
+  background:
+    rgba(34, 197, 94, 0.06);
+
+  color: #4ade80;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+}
+
+
+.ai-live::before {
+  content: "";
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 6px rgba(34, 197, 94, 0.9);
+}
+
+
+/* =========================================================
+   CLOSE
+   ========================================================= */
+
+.ai-close {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid transparent;
+
+  border-radius: 5px;
+
+  background: transparent;
+
+  color: #64748b;
+
+  font-size: 17px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+
+.ai-close:hover {
+  background:
+    rgba(255, 255, 255, 0.07);
+
+  border-color:
+    rgba(255, 255, 255, 0.1);
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.ai-insight-content {
+  padding: 11px;
+
+  box-sizing: border-box;
+
+  max-height: 510px;
+
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+
+  scrollbar-color:
+    #27394c
+    transparent;
+}
+
+
+.ai-insight-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+
+.ai-insight-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.ai-insight-content::-webkit-scrollbar-thumb {
+  background: #27394c;
+
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.ai-section {
+  margin-top: 12px;
+}
+
+
+.ai-section-label {
+  margin-bottom: 6px;
+
+  color: #71859a;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HEADLINE
+   ========================================================= */
+
+.ai-headline {
+  margin: 0 0 7px;
+
+  color: #f8fafc;
+
+  font-size: 14px;
+
+  font-weight: 750;
+
+  line-height: 1.35;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.ai-summary {
+  margin: 0;
+
+  color: #9aaabd;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   RISK BOX
+   ========================================================= */
+
+.ai-risk-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 10px;
+
+  padding: 9px 10px;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 7px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+}
+
+
+.ai-risk-label {
+  color: #71859a;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+
+  text-transform: uppercase;
+}
+
+
+.ai-risk-value {
+  margin-top: 3px;
+
+  font-size: 15px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.4px;
+}
+
+
+.ai-risk-dot {
+  width: 9px;
+  height: 9px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 9px currentColor;
+}
+
+
+.ai-risk-low {
+  color: #22c55e;
+}
+
+
+.ai-risk-moderate {
+  color: #facc15;
+}
+
+
+.ai-risk-high {
+  color: #fb923c;
+}
+
+
+.ai-risk-very-high {
+  color: #ef4444;
+}
+
+
+/* =========================================================
+   AFFECTED AREA TAGS
+   ========================================================= */
+
+.ai-area-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 4px;
+
+  margin-top: 7px;
+}
+
+
+.ai-area-tag {
+  padding: 4px 6px;
+
+  border:
+    1px solid
+    rgba(74, 144, 196, 0.25);
+
+  border-radius: 4px;
+
+  background:
+    rgba(34, 119, 170, 0.08);
+
+  color: #8fb8d5;
+
+  font-size: 7px;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   LISTS
+   ========================================================= */
+
+.ai-insight-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  margin: 7px 0 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.ai-insight-item {
+  position: relative;
+
+  padding-left: 12px;
+
+  color: #9baabc;
+
+  font-size: 8px;
+
+  line-height: 1.45;
+}
+
+
+.ai-insight-item::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 5px;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #22c7ff;
+
+  box-shadow:
+    0 0 5px
+    rgba(34, 199, 255, 0.5);
+}
+
+
+.ai-insight-item.recommendation::before {
+  background: #22c55e;
+
+  box-shadow:
+    0 0 5px
+    rgba(34, 197, 94, 0.5);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.ai-insight-footer {
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 11px;
+
+  box-sizing: border-box;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.06);
+
+  background:
+    rgba(3, 8, 15, 0.8);
+
+  color: #52667b;
+
+  font-size: 7px;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.ai-loading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  min-height: 80px;
+
+  color: #8b9bae;
+
+  font-size: 9px;
+}
+
+
+.ai-loading strong {
+  display: block;
+
+  color: #d8e2ec;
+
+  font-size: 9px;
+}
+
+
+.ai-loading small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #60758a;
+
+  font-size: 8px;
+}
+
+
+.ai-loading-spinner {
+  width: 10px;
+  height: 10px;
+
+  flex-shrink: 0;
+
+  border:
+    2px solid
+    rgba(34, 199, 255, 0.18);
+
+  border-top-color: #22c7ff;
+
+  border-radius: 50%;
+
+  animation:
+    ai-spin 0.8s linear infinite;
+}
+
+
+@keyframes ai-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.ai-error {
+  padding: 4px 0;
+
+  color: #94a3b8;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+}
+
+
+.ai-error-title {
+  margin-bottom: 4px;
+
+  color: #f87171;
+
+  font-weight: 700;
+}
+
+
+.ai-error-message {
+  margin-bottom: 8px;
+
+  color: #7f91a4;
+}
+
+
+.ai-retry {
+  padding: 5px 9px;
+
+  border:
+    1px solid
+    rgba(34, 199, 255, 0.25);
+
+  border-radius: 5px;
+
+  background:
+    rgba(34, 199, 255, 0.07);
+
+  color: #67d5ff;
+
+  font-size: 8px;
+
+  cursor: pointer;
+}
+
+
+.ai-retry:hover {
+  background:
+    rgba(34, 199, 255, 0.14);
+}
+
+
+/* =========================================================
+   CLOSED / REOPEN BUTTON
+   ========================================================= */
+
+.ai-reopen-button {
+  position: fixed;
+
+  top: 185px;
+  right: 20px;
+
+  z-index: 5000;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  height: 32px;
+
+  padding: 0 10px;
+
+  border:
+    1px solid
+    rgba(60, 100, 135, 0.45);
+
+  border-radius: 7px;
+
+  background:
+    rgba(6, 14, 24, 0.96);
+
+  color: #9db1c4;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px
+    rgba(0, 0, 0, 0.4);
+}
+
+
+.ai-reopen-button:hover {
+  color: #ffffff;
+
+  border-color:
+    rgba(34, 199, 255, 0.4);
+}
+
+
+.ai-reopen-dot {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 6px
+    rgba(34, 197, 94, 0.8);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .ai-insight {
+    max-width: 320px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .ai-insight {
+    max-width: 300px;
+  }
+
+  .ai-insight-content {
+    max-height: 400px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .ai-insight {
+    max-width: none;
+  }
+
+  .ai-insight-wrapper {
+    top: auto !important;
+
+    right: 10px !important;
+    bottom: 10px !important;
+    left: 10px !important;
+
+    width: auto !important;
+  }
+
+  .ai-reopen-button {
+    top: auto;
+
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .ai-insight-content {
+    max-height: 42vh;
+  }
+}

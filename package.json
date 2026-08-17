@@ -1,0 +1,40 @@
+{
+  "name": "floodguard-aklan",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@google/genai": "^2.17.1",
+    "@hookform/resolvers": "^5.7.1",
+    "@turf/dissolve": "^7.4.0",
+    "@turf/helpers": "^7.4.0",
+    "@turf/union": "^7.4.0",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^1.28.0",
+    "next": "16.2.12",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-hook-form": "^7.84.0",
+    "react-hot-toast": "^2.6.0",
+    "react-icons": "^5.7.0",
+    "react-leaflet": "^5.0.0",
+    "recharts": "^3.10.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/leaflet": "^1.9.22",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.12",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
